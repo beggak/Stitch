@@ -2,10 +2,6 @@ import RxFlow
 import RxSwift
 import RxRelay
 
-enum AppStep: Step {
-    case login
-}
-
 class AppFlow: Flow {
     
     var root: Presentable {
@@ -38,14 +34,10 @@ class AppFlow: Flow {
         return .one(flowContributor: .contribute(withNextPresentable: viewController,
                                                  withNextStepper: viewController.viewModel))
     }
-}
-
-class AppStepper: Stepper {
-    var steps: PublishRelay<Step> = .init()
     
-    var initialStep: Step {
-        return AppStep.login
-    }
+//    private func navigateToMovies() -> FlowContributors {
+//        
+//    }
 }
 
 

@@ -9,17 +9,20 @@ internal class LogInView: BaseView {
     
     override func setUpView() {
         super.setUpView()
+        backgroundColor = .systemYellow
+        
         textField = UITextField.init()
         textField.layer.borderWidth = 1
         textField.layer.cornerRadius = 8
-        textField.layer.borderColor = UIColor.systemPurple.cgColor
+        textField.backgroundColor = .systemCyan
+        textField.placeholder = "Enter your name"
         textField.borderStyle = .roundedRect
         textField.textAlignment = .left
         addSubview(textField)
         
         button = UIButton.init()
         button.layer.cornerRadius = 8
-        button.backgroundColor = .systemGreen
+        button.backgroundColor = .systemBlue
         button.setTitle("Log In", for: .normal)
         addSubview(button)
     }

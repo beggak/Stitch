@@ -36,7 +36,7 @@ open class BaseView: UIView {
     }
     public func configureNavigationBar() {
         navigationBar = UINavigationBar.init()
-        navigationBar.backgroundColor = .systemGreen
+        navigationBar.backgroundColor = .systemBlue
         navigationBar.addSubview(imageLogo)
         self.addSubview(navigationBar)
     }

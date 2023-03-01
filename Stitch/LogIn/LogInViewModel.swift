@@ -38,7 +38,6 @@ extension LogInViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
-//        return Output(logInTapped: .empty())
         let posts = input.logInButton
             .asDriver(onErrorJustReturn: ())
         return Output(logInTapped: posts)
