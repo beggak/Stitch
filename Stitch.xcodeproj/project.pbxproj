@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8C18EAF78BD9DBD058369B3F /* Pods_Stitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B48A0E85C7299D787CEEF9 /* Pods_Stitch.framework */; };
 		9A66FE6C29AF475C00F6ACD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66FE6B29AF475C00F6ACD5 /* AppDelegate.swift */; };
-		9A66FE7029AF475C00F6ACD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66FE6F29AF475C00F6ACD5 /* ViewController.swift */; };
 		9A66FE7529AF475E00F6ACD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A66FE7429AF475E00F6ACD5 /* Assets.xcassets */; };
 		9A66FE8329AF481E00F6ACD5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66FE8229AF481E00F6ACD5 /* BaseView.swift */; };
 		9A66FE8529AF482800F6ACD5 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66FE8429AF482800F6ACD5 /* BaseController.swift */; };
@@ -27,7 +26,6 @@
 		7F1597F86320BAFD654F1655 /* Pods-Stitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stitch.release.xcconfig"; path = "Target Support Files/Pods-Stitch/Pods-Stitch.release.xcconfig"; sourceTree = "<group>"; };
 		9A66FE6829AF475C00F6ACD5 /* Stitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A66FE6B29AF475C00F6ACD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A66FE6F29AF475C00F6ACD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9A66FE7429AF475E00F6ACD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A66FE7929AF475E00F6ACD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A66FE8229AF481E00F6ACD5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -90,13 +88,11 @@
 		9A66FE6A29AF475C00F6ACD5 /* Stitch */ = {
 			isa = PBXGroup;
 			children = (
-				9A66FE8829AF489300F6ACD5 /* LogIn */,
 				9A66FE7F29AF47FE00F6ACD5 /* Application */,
 				9A66FE8029AF480F00F6ACD5 /* Core */,
-				9A66FE6F29AF475C00F6ACD5 /* ViewController.swift */,
+				9A66FE8829AF489300F6ACD5 /* LogIn */,
 				9A66FE7429AF475E00F6ACD5 /* Assets.xcassets */,
 				9A66FE7929AF475E00F6ACD5 /* Info.plist */,
-				9A66FE9229AF492400F6ACD5 /* AuthService.swift */,
 			);
 			path = Stitch;
 			sourceTree = "<group>";
@@ -131,6 +127,7 @@
 		9A66FE8829AF489300F6ACD5 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				9A66FE9229AF492400F6ACD5 /* AuthService.swift */,
 				9A66FE8929AF489D00F6ACD5 /* LogInView.swift */,
 				9A66FE8B29AF48A400F6ACD5 /* LogInController.swift */,
 				9A66FE8D29AF48AE00F6ACD5 /* LogInViewModel.swift */,
@@ -265,7 +262,6 @@
 				9A66FE8C29AF48A400F6ACD5 /* LogInController.swift in Sources */,
 				9A66FE8729AF483000F6ACD5 /* BaseViewModel.swift in Sources */,
 				9A66FE8E29AF48AE00F6ACD5 /* LogInViewModel.swift in Sources */,
-				9A66FE7029AF475C00F6ACD5 /* ViewController.swift in Sources */,
 				9A66FE9329AF492400F6ACD5 /* AuthService.swift in Sources */,
 				9A66FE8529AF482800F6ACD5 /* BaseController.swift in Sources */,
 				9A66FE6C29AF475C00F6ACD5 /* AppDelegate.swift in Sources */,

@@ -23,15 +23,15 @@ open class BaseView: UIView {
     
     public func setUpConstraints() {
         navigationBar.snp.makeConstraints {
-            $0.height.equalTo(84)
+            $0.height.equalTo(100)
             $0.width.equalToSuperview()
         }
         
         imageLogo.snp.makeConstraints {
-            $0.width.equalTo(98)
-            $0.height.equalTo(37)
-            $0.leading.equalToSuperview().offset(35)
-            $0.top.equalToSuperview().offset(35)
+            $0.width.equalTo(80)
+            $0.height.equalTo(60)
+            $0.leading.equalToSuperview().offset(30)
+            $0.top.equalTo(safeAreaLayoutGuide.snp.top)
         }
     }
     public func configureNavigationBar() {

@@ -19,7 +19,7 @@ internal class LogInView: BaseView {
         
         button = UIButton.init()
         button.layer.cornerRadius = 8
-        button.backgroundColor = .green
+        button.backgroundColor = .systemGreen
         button.setTitle("Log In", for: .normal)
         addSubview(button)
     }
@@ -28,12 +28,14 @@ internal class LogInView: BaseView {
         super.setUpConstraints()
         textField.snp.makeConstraints { make in
             make.center.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalToSuperview().offset(20)
             make.height.equalTo(48)
         }
         button.snp.makeConstraints { make in
             make.top.equalTo(textField.snp.bottom).offset(50)
-            make.right.equalToSuperview().offset(20)
-            make.left.equalToSuperview().offset(-20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.leading.equalToSuperview().offset(20)
             make.height.equalTo(48)
         }
     }
