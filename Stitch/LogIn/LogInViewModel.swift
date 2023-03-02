@@ -38,8 +38,8 @@ extension LogInViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
-        let posts = input.logInButton
+        let nextScreen = input.logInButton
             .asDriver(onErrorJustReturn: ())
-        return Output(logInTapped: posts)
+        return Output(logInTapped: nextScreen)
     }
 }

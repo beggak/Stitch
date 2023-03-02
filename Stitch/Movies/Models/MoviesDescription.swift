@@ -1,5 +1,5 @@
 
-struct MoviesHelper {
+struct MoviesDescription {
     static let startrekBeyondDescription = "After stopping off at Starbase Yorktown, a remote outpost on the fringes of Federation space, the USS Enterprise, halfway into their five-year mission, is destroyed by an unstoppable wave of unknown aliens"
     static let starwarsDescription = "30 years after the defeat of Darth Vader and the Empire, Rey, a scavenger from the planet Jakku, finds a BB-8 droid that knows the whereabouts of the long lost Luke Skywalker."
 

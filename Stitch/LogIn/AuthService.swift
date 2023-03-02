@@ -11,12 +11,12 @@ public class AuthenticationService: AuthServiceProtocol {
     func signIn(by name: String) -> Single<String> {
         
         enum LogInError: Error {
-            case namesEmpty, unreadable
+            case emptyName
         }
         return Single.create { single in
             let disposable = Disposables.create()
             guard name.count > 0 else {
-                single(.error(LogInError.namesEmpty))
+                single(.error(LogInError.emptyName))
                 return disposable
             }
             single(.success(name))

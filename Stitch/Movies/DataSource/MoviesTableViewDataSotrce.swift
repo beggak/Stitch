@@ -21,10 +21,10 @@ struct MoviesTableViewDataSource {
     
     static func dataSource(_ tableView: UITableView) -> MoviesDataSource {
         return MoviesDataSource.init { dataSource, tableView, indexPath, item in
-            tableView.register(ImageTitleSubtitle.self,
-                               forCellReuseIdentifier: String(describing: ImageTitleSubtitle.self))
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ImageTitleSubtitle.self),
-                                                     for: indexPath) as! ImageTitleSubtitle
+            tableView.register(ImageWithTitle.self,
+                               forCellReuseIdentifier: String(describing: ImageWithTitle.self))
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ImageWithTitle.self),
+                                                     for: indexPath) as! ImageWithTitle
             cell.configure(with: item)
             return cell
         } titleForFooterInSection: { dataSource, index in

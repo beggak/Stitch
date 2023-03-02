@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 
 public class MoviesView: BaseView {
-    private var tableView: UITableView!
+    internal var tableView: UITableView!
     
     override public func setUpView() {
         super.setUpView()

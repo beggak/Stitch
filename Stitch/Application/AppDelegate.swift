@@ -12,13 +12,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        self.coordinator.rx.willNavigate.subscribe(onNext: { (flow, step) in
-              print("will navigate to flow = \(flow) and step = \(step)")
-          }).disposed(by: self.disposeBag)
-
-        self.coordinator.rx.didNavigate.subscribe(onNext: { (flow, step) in
-              print("did navigate to flow = \(flow) and step = \(step)")
-          }).disposed(by: self.disposeBag)
+//        self.coordinator.rx.willNavigate.subscribe(onNext: { (flow, step) in
+//              print("will navigate to flow = \(flow) and step = \(step)")
+//          }).disposed(by: self.disposeBag)
+//
+//        self.coordinator.rx.didNavigate.subscribe(onNext: { (flow, step) in
+//              print("did navigate to flow = \(flow) and step = \(step)")
+//          }).disposed(by: self.disposeBag)
         
         let appFlow = AppFlow()
         Flows.whenReady(flow1: appFlow) { [weak self] root in

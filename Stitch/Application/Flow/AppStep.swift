@@ -4,6 +4,7 @@ import RxFlow
 
 enum AppStep: Step {
     case login
+    case movies
 }
 
 class AppStepper: Stepper {

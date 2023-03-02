@@ -20,6 +20,8 @@ class AppFlow: Flow {
         switch step {
         case .login:
             return navigateToLogin()
+        case .movies:
+            return navigateToLogin()
         }
     }
     
@@ -36,7 +38,7 @@ class AppFlow: Flow {
     }
     
 //    private func navigateToMovies() -> FlowContributors {
-//        
+//
 //    }
 }
 
