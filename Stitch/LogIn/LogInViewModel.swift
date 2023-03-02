@@ -18,7 +18,8 @@ internal class LogInViewModel: BaseViewModel, Stepper {
     }
     
     func logIn() {
-        guard !name.value.isEmpty else { return }
+        guard !name.value.isEmpty else { print("Name is empty"); return }
+        print(name.value)
         service?.signIn(by: name.value)
             .subscribe{ [weak self] _ in
                 self?.steps.accept(AppStep.login)
@@ -31,6 +32,7 @@ internal class LogInViewModel: BaseViewModel, Stepper {
 extension LogInViewModel: ViewModelType {
     struct Input {
         let nextTrigger: Driver<Void>
+        let requisite: Driver<String>
     }
     
     struct Output {
@@ -39,22 +41,7 @@ extension LogInViewModel: ViewModelType {
     
     func transform(input: Input) -> Output {
         let nextTrigger = input.nextTrigger.do(onNext: logIn)
+        let _ = input.requisite.drive(name)
         return Output(nextTapped: nextTrigger)
     }
 }
-
-//extension LogInViewModel: ViewModelType {
-//    struct Input {
-//        let logInButton: Driver<Void>
-//    }
-//
-//    struct Output {
-//        let logInTapped: Driver<Void>
-//    }
-//
-//    func transform(input: Input) -> Output {
-//        let nextScreen = input.logInButton
-//            .asDriver(onErrorJustReturn: ())
-//        return Output(logInTapped: nextScreen)
-//    }
-//}
