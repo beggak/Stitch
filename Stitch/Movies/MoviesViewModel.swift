@@ -21,15 +21,15 @@ internal class MoviesViewModel: BaseViewModel, Stepper {
 
 extension MoviesViewModel: ViewModelType {
     struct Input {
-        let cell: Driver<Void>
+        let itemSelected: Driver<Void>
     }
     
     struct Output {
-        let didCellTapped: Driver<Void>
+        let sections: Driver<Void>
     }
   
     func transform(input: Input) -> Output {
-        let movieInfo = input.cell.asDriver(onErrorJustReturn: ())
-        return Output(didCellTapped: movieInfo)
+        let movieInfo = input.itemSelected.asDriver(onErrorJustReturn: ())
+        return Output(sections: movieInfo)
     }
 }
